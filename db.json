@@ -1,10 +1,11 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Alice",
+      "name": "riva",
       "email": "alice@example.com",
-      "role": "student"
+      "phone": "8396065443",
+      "department": "Transport Management",
+      "id": "1"
     },
     {
       "id": "2",
@@ -15,38 +16,47 @@
   ],
   "buses": [
     {
-      "id": "1",
-      "busNumber": "BUS-101",
-      "route": "Campus A - City Center",
-      "driver": "Rajesh",
+      "id": "2",
+      "busNumber": "BUS-201",
+      "route": "Campus B - Downtown",
+      "driver": "Suresh",
+      "status": "active",
+      "capacity": 20
+    },
+    {
+      "id": "a8c9",
+      "busNumber": "20111",
+      "capacity": 1000,
+      "driver": "ritika",
+      "route": "Q",
       "status": "active"
     },
     {
-      "id": "2",
-      "busNumber": "BUS-202",
+      "id": "faf0",
+      "busNumber": "BUS-201",
+      "capacity": 20,
+      "driver": "ritika",
       "route": "Campus B - Downtown",
-      "driver": "Suresh",
-      "status": "inactive"
+      "status": "active"
     }
   ],
   "routes": [
     {
-      "id": "1",
-      "name": "Route 1",
-      "stops": [
-        "Campus A",
-        "Library",
-        "City Center"
-      ]
-    },
-    {
-      "id": "2",
       "name": "Route 2",
       "stops": [
         "Campus B",
-        "Station",
-        "Downtown"
-      ]
+        "Station"
+      ],
+      "duration": "40",
+      "id": "2"
+    },
+    {
+      "id": "f5c5",
+      "name": "Route A",
+      "stops": [
+        "ambala city"
+      ],
+      "duration": "30 min"
     }
   ],
   "payments": [
@@ -80,7 +90,7 @@
       "description": "Bus delayed due to traffic",
       "reportedBy": "Bob",
       "date": "2025-11-11",
-      "status": "pending"
+      "status": "resolved"
     }
   ],
   "notifications": [
