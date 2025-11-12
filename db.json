@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alice",
+      "email": "alice@example.com",
+      "role": "student"
+    },
+    {
+      "id": "2",
+      "name": "Bob",
+      "email": "bob@example.com",
+      "role": "faculty"
+    }
+  ],
+  "buses": [
+    {
+      "id": "1",
+      "busNumber": "BUS-101",
+      "route": "Campus A - City Center",
+      "driver": "Rajesh",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "busNumber": "BUS-202",
+      "route": "Campus B - Downtown",
+      "driver": "Suresh",
+      "status": "inactive"
+    }
+  ],
+  "routes": [
+    {
+      "id": "1",
+      "name": "Route 1",
+      "stops": [
+        "Campus A",
+        "Library",
+        "City Center"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Route 2",
+      "stops": [
+        "Campus B",
+        "Station",
+        "Downtown"
+      ]
+    }
+  ],
+  "payments": [
+    {
+      "id": "1",
+      "userId": 1,
+      "amount": 500,
+      "date": "2025-11-10",
+      "status": "completed"
+    },
+    {
+      "id": "2",
+      "userId": 2,
+      "amount": 400,
+      "date": "2025-11-11",
+      "status": "pending"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "1",
+      "busNumber": "BUS-101",
+      "description": "Flat tire on route",
+      "reportedBy": "Alice",
+      "date": "2025-11-10",
+      "status": "resolved"
+    },
+    {
+      "id": "2",
+      "busNumber": "BUS-202",
+      "description": "Bus delayed due to traffic",
+      "reportedBy": "Bob",
+      "date": "2025-11-11",
+      "status": "resolved"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Welcome",
+      "message": "Welcome to Busify!",
+      "type": "info",
+      "date": "2025-11-10 10:00 AM"
+    },
+    {
+      "id": "2",
+      "title": "Payment Reminder",
+      "message": "Please pay your bus fee by Nov 15.",
+      "type": "warning",
+      "date": "2025-11-11 09:30 AM"
+    },
+    {
+      "id": "d137",
+      "title": "jjj",
+      "message": "jjmjnv cxdfrgh",
+      "type": "info",
+      "date": "12/11/2025, 1:15:40 pm"
+    }
+  ]
+}
