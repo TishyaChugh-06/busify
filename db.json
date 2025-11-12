@@ -2,8 +2,8 @@
   "users": [
     {
       "name": "riva",
-      "email": "alice@example.com",
-      "phone": "8396065443",
+      "email": "riva19@example.com",
+      "phone": "8396065448",
       "department": "Transport Management",
       "id": "1"
     },
@@ -12,17 +12,16 @@
       "name": "Bob",
       "email": "bob@example.com",
       "role": "faculty"
+    },
+    {
+      "id": "7834",
+      "name": "riva",
+      "email": "riva@gmail.com",
+      "role": "student",
+      "route": "95"
     }
   ],
   "buses": [
-    {
-      "id": "2",
-      "busNumber": "BUS-201",
-      "route": "Campus B - Downtown",
-      "driver": "Suresh",
-      "status": "active",
-      "capacity": 20
-    },
     {
       "id": "a8c9",
       "busNumber": "20111",
@@ -37,6 +36,14 @@
       "capacity": 20,
       "driver": "ritika",
       "route": "Campus B - Downtown",
+      "status": "active"
+    },
+    {
+      "id": "ec36",
+      "busNumber": "67",
+      "capacity": 86,
+      "driver": "riva",
+      "route": "Route A",
       "status": "active"
     }
   ],
@@ -57,6 +64,14 @@
         "ambala city"
       ],
       "duration": "30 min"
+    },
+    {
+      "id": "7e8b",
+      "name": "45",
+      "stops": [
+        "32"
+      ],
+      "duration": "43"
     }
   ],
   "payments": [
@@ -82,7 +97,7 @@
       "description": "Flat tire on route",
       "reportedBy": "Alice",
       "date": "2025-11-10",
-      "status": "pending"
+      "status": "resolved"
     },
     {
       "id": "2",
@@ -90,7 +105,7 @@
       "description": "Bus delayed due to traffic",
       "reportedBy": "Bob",
       "date": "2025-11-11",
-      "status": "resolved"
+      "status": "pending"
     }
   ],
   "notifications": [
