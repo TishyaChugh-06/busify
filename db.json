@@ -62,7 +62,7 @@
       "userId": 2,
       "amount": 400,
       "date": "2025-11-11",
-      "status": "pending"
+      "status": "completed"
     }
   ],
   "incidents": [
@@ -72,7 +72,7 @@
       "description": "Flat tire on route",
       "reportedBy": "Alice",
       "date": "2025-11-10",
-      "status": "resolved"
+      "status": "pending"
     },
     {
       "id": "2",
@@ -80,7 +80,7 @@
       "description": "Bus delayed due to traffic",
       "reportedBy": "Bob",
       "date": "2025-11-11",
-      "status": "resolved"
+      "status": "pending"
     }
   ],
   "notifications": [
@@ -97,13 +97,6 @@
       "message": "Please pay your bus fee by Nov 15.",
       "type": "warning",
       "date": "2025-11-11 09:30 AM"
-    },
-    {
-      "id": "d137",
-      "title": "jjj",
-      "message": "jjmjnv cxdfrgh",
-      "type": "info",
-      "date": "12/11/2025, 1:15:40 pm"
     }
   ]
 }
