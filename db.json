@@ -1,12 +1,13 @@
 {
   "users": [
     {
+      "id": "1",
       "name": "Riivaaaaaaa",
       "email": "riva19@example.com",
       "phone": "8396065448",
       "studentId": "STU2024002",
       "route": "Route A",
-      "id": "1"
+      "role": "student"
     },
     {
       "id": "2",
@@ -52,19 +53,19 @@
   ],
   "routes": [
     {
+      "id": "2",
       "name": "Route 2",
       "stops": [
         "Campus B",
         "Station"
       ],
-      "duration": "40",
-      "id": "2"
+      "duration": "40 min"
     },
     {
       "id": "f5c5",
       "name": "Route A",
       "stops": [
-        "ambala city"
+        "Ambala City"
       ],
       "duration": "30 min"
     },
@@ -74,7 +75,7 @@
       "stops": [
         "32"
       ],
-      "duration": "43"
+      "duration": "43 min"
     },
     {
       "id": "r301",
@@ -134,100 +135,18 @@
   ],
   "payments": [
     {
-      "id": "1",
-      "userId": 1,
-      "amount": 500,
-      "date": "2025-11-10",
-      "status": "completed"
-    },
-    {
-      "id": "2",
-      "userId": 2,
-      "amount": 400,
-      "date": "2025-11-11",
-      "status": "completed"
-    },
-    {
-      "id": "1762951732670",
-      "date": "11/12/2025, 6:18:52 PM",
-      "amount": 1233,
+      "id": "1763034758879",
+      "name": "Tishya Chugh",
+      "amount": 1000,
       "method": "card",
+      "date": "11/13/2025",
       "status": "completed"
     },
     {
-      "id": "1762952221790",
-      "date": "11/12/2025, 6:27:01 PM",
-      "amount": 122,
-      "method": "card",
-      "status": "completed"
-    },
-    {
-      "id": "5855",
-      "date": "11/12/2025, 6:30:29 PM",
-      "amount": "1200",
-      "method": "card",
-      "status": "completed"
-    },
-    {
-      "id": "23d8",
-      "date": "11/12/2025, 6:30:52 PM",
-      "amount": "12",
-      "method": "card",
-      "status": "completed"
-    },
-    {
-      "id": "19c7",
-      "date": "11/12/2025, 6:36:10 PM",
-      "amount": "1234",
-      "method": "card",
-      "status": "completed"
-    },
-    {
-      "id": "0436",
-      "date": "11/12/2025, 6:38:57 PM",
-      "amount": "12",
-      "method": "card",
-      "status": "completed"
-    },
-    {
-      "id": "9dca",
-      "date": "11/12/2025, 6:40:04 PM",
-      "amount": "1200",
-      "method": "card",
-      "status": "completed"
-    },
-    {
-      "id": "4708",
-      "date": "11/12/2025, 8:07:59 PM",
-      "amount": "1000000",
-      "method": "card",
-      "status": "completed"
-    },
-    {
-      "id": "02df",
-      "date": "11/12/2025, 9:01:12 PM",
-      "amount": "12",
-      "method": "card",
-      "status": "completed"
-    },
-    {
-      "id": "b602",
-      "date": "11/12/2025, 9:03:09 PM",
-      "amount": "1250000",
-      "method": "upi",
-      "status": "completed"
-    },
-    {
-      "id": "1509",
-      "date": "11/12/2025, 9:05:13 PM",
-      "amount": "1",
-      "method": "card",
-      "status": "completed"
-    },
-    {
-      "id": "c16d",
-      "date": "11/13/2025, 9:07:59 AM",
-      "amount": "400000",
+      "id": "19a7d41ffd2",
+      "userName": "Ritika",
+      "date": "11/13/2025, 6:17:48 PM",
+      "amount": "2000",
       "method": "upi",
       "status": "completed"
     }
@@ -254,7 +173,7 @@
       "busNumber": "88",
       "description": "hello",
       "severity": "low",
-      "userId": 1,
+      "userId": "1",
       "status": "pending",
       "date": "2025-11-12"
     },
@@ -263,7 +182,7 @@
       "busNumber": "88",
       "description": "accident",
       "severity": "high",
-      "userId": 1,
+      "userId": "1",
       "status": "pending",
       "date": "2025-11-12"
     },
@@ -272,7 +191,7 @@
       "busNumber": "125",
       "description": "abc",
       "severity": "low",
-      "userId": 1,
+      "userId": "1",
       "status": "pending",
       "date": "2025-11-12"
     }
@@ -294,15 +213,15 @@
     },
     {
       "id": "f406",
-      "title": "bus timings",
-      "message": "bus will arrive at 8 tomorrow",
+      "title": "Bus Timings",
+      "message": "Bus will arrive at 8 AM tomorrow.",
       "type": "info",
       "date": "11/12/2025, 9:06:51 PM"
     },
     {
       "id": "9a66",
-      "title": "hiiiiiiiiiiiiiiiiiiiii",
-      "message": "dont be lateeee",
+      "title": "Be on Time",
+      "message": "Don’t be late tomorrow!",
       "type": "warning",
       "date": "11/13/2025, 9:09:10 AM"
     }
