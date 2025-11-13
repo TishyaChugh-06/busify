@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
-import { mockIncidents } from '../../mockData';
 import './UserPages.css';
 
 const IncidentReport = () => {
@@ -10,6 +9,24 @@ const IncidentReport = () => {
     description: '',
     severity: 'low'
   });
+  const [incidents, setIncidents] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const userId = 1; // replace with logged-in user ID
+
+  // Fetch incidents from JSON Server
+  useEffect(() => {
+    fetch(`http://localhost:3001/incidents?userId=${userId}`)
+      .then(res => res.json())
+      .then(data => {
+        setIncidents(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,9 +34,29 @@ const IncidentReport = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Incident reported successfully!');
-    setFormData({ busNumber: '', description: '', severity: 'low' });
+
+    const newIncident = {
+      ...formData,
+      userId,
+      status: 'pending', // default status when reported
+      date: new Date().toISOString().split('T')[0] // YYYY-MM-DD
+    };
+
+    fetch('http://localhost:3001/incidents', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newIncident)
+    })
+      .then(res => res.json())
+      .then(data => {
+        alert('Incident reported successfully!');
+        setIncidents([...incidents, data]); // update table immediately
+        setFormData({ busNumber: '', description: '', severity: 'low' });
+      })
+      .catch(err => console.error(err));
   };
+
+  if (loading) return <p>Loading...</p>;
 
   return (
     <div>
@@ -86,20 +123,18 @@ const IncidentReport = () => {
                 </tr>
               </thead>
               <tbody>
-                {mockIncidents.map(incident => (
+                {incidents.map(incident => (
                   <tr key={incident.id}>
                     <td>{incident.busNumber}</td>
                     <td>{incident.description}</td>
                     <td>{incident.date}</td>
-                    <td>
-                      <span style={{
-                        color: incident.status === 'resolved' ? 'var(--success)' : 
-                               incident.status === 'in-progress' ? 'var(--warning)' : 'var(--danger)',
-                        fontWeight: '500',
-                        textTransform: 'capitalize'
-                      }}>
-                        {incident.status}
-                      </span>
+                    <td style={{
+                      color: incident.status === 'resolved' ? 'var(--success)' :
+                             incident.status === 'in-progress' ? 'var(--warning)' : 'var(--danger)',
+                      fontWeight: '500',
+                      textTransform: 'capitalize'
+                    }}>
+                      {incident.status}
                     </td>
                   </tr>
                 ))}
