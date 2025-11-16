@@ -49,29 +49,26 @@
       "driver": "riva",
       "route": "Route A",
       "status": "active"
+    },
+    {
+      "id": "34aa",
+      "busNumber": "88",
+      "capacity": 123,
+      "driver": "Dilbag Singh",
+      "route": "Route A",
+      "status": "active"
     }
   ],
   "routes": [
     {
-      "id": "r301",
-      "busNumber": "B301",
       "name": "Campus - Ambala",
-      "destination": "Ambala",
-      "duration": "1 hr 20 min",
       "stops": [
-        {
-          "name": "Campus Gate",
-          "time": "08:00 AM"
-        },
-        {
-          "name": "Sector 14",
-          "time": "08:25 AM"
-        },
-        {
-          "name": "Ambala City",
-          "time": "09:20 AM"
-        }
-      ]
+        "[object Object]",
+        "[object Object]",
+        "[object Object]"
+      ],
+      "duration": "1 hr 20 min",
+      "id": "r301"
     },
     {
       "id": "r302",
@@ -164,6 +161,14 @@
       "amount": "988",
       "method": "card",
       "status": "completed"
+    },
+    {
+      "id": "19a8d96c889",
+      "userName": "Vidhi",
+      "date": "16/11/2025, 10:24:20 pm",
+      "amount": "120000",
+      "method": "card",
+      "status": "completed"
     }
   ],
   "incidents": [
@@ -181,7 +186,7 @@
       "description": "Bus delayed due to traffic",
       "reportedBy": "Bob",
       "date": "2025-11-11",
-      "status": "pending"
+      "status": "resolved"
     },
     {
       "id": "ba08",
@@ -218,6 +223,15 @@
       "userId": 1,
       "status": "pending",
       "date": "2025-11-13"
+    },
+    {
+      "id": "578d",
+      "busNumber": "88",
+      "description": "adc",
+      "severity": "medium",
+      "userId": 1,
+      "status": "pending",
+      "date": "2025-11-16"
     }
   ],
   "notifications": [
@@ -241,13 +255,6 @@
       "message": "Bus will arrive at 8 AM tomorrow.",
       "type": "info",
       "date": "11/12/2025, 9:06:51 PM"
-    },
-    {
-      "id": "9a66",
-      "title": "Be on Time",
-      "message": "Don’t be late tomorrow!",
-      "type": "warning",
-      "date": "11/13/2025, 9:09:10 AM"
     }
   ]
 }
