@@ -58,8 +58,8 @@ export const mockBuses = [
 
 export const mockRoutes = [
   { id: 1, name: 'Ambala', stops: ['Saha', 'Mithapur', 'Mangloi', 'SD College', 'Chitkara University'], duration: '30 min' },
-  { id: 2, name: 'Route B', stops: ['Main Gate', 'Student Center', 'Admin Block', 'Hostel Area'], duration: '25 min' },
-  { id: 3, name: 'Route C', stops: ['Main Gate', 'Science Block', 'Arts Block', 'Cafeteria', 'Parking Lot'], duration: '35 min' },
+  { id: 2, name: 'Patiala', stops: ['Main Gate', 'Student Center', 'Admin Block', 'Hostel Area'], duration: '25 min' },
+  { id: 3, name: 'Shahbad', stops: ['Main Gate', 'Science Block', 'Arts Block', 'Cafeteria', 'Parking Lot'], duration: '35 min' },
 ];
 
 export const mockUsers = [
