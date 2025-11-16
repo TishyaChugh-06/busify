@@ -1,62 +1,96 @@
-import React from 'react';
-import Navbar from '../../components/Navbar';
-import Sidebar from '../../components/Sidebar';
-import { mockRoutes } from '../../mockData';
-import './UserPages.css';
+// import React, { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// import Navbar from "../../components/Navbar";
+// import Sidebar from "../../components/Sidebar";
+// import "./UserPages.css";
+
+// const MyRoute = () => {
+//   const [destination, setDestination] = useState("");
+//   const [error, setError] = useState("");
+//   const navigate = useNavigate();
+
+//   const handleSearch = () => {
+//     const place = destination.trim().toLowerCase();
+//     if (!place) {
+//       setError("Please enter a destination!");
+//     } else if (place === "ambala") {
+//       navigate("/user/ambala-buses");
+//     } else if (place === "patiala") {
+//       navigate("/user/patiala-buses");
+//     } else {
+//       setError("No buses found for this destination!");
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <Navbar role="user" />
+//       <div className="dashboard-layout">
+//         <Sidebar role="user" />
+//         <main className="main-content route-page">
+//           <div className="search-card">
+//             <h1>Find Your Bus</h1>
+//             <p>Enter Destination:</p>
+//             <input
+//               type="text"
+//               placeholder="Add Destination"
+//               value={destination}
+//               onChange={(e) => setDestination(e.target.value)}
+//               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+//             />
+//             <button onClick={handleSearch}>Search</button>
+//             {error && <p className="error-text">{error}</p>}
+//           </div>
+//         </main>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default MyRoute;
+// // testing git change
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/Navbar";
+import Sidebar from "../../components/Sidebar";
+import "./UserPages.css";
 
 const MyRoute = () => {
-  const myRoute = mockRoutes[0]; // Assuming user is on Route A
+  const [destination, setDestination] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    const place = destination.trim().toLowerCase();
+    if (!place) {
+      setError("Please enter a destination!");
+    } else if (place === "ambala") {
+      navigate("/user/ambala-buses");
+    } else if (place === "patiala") {
+      navigate("/user/patiala-buses");
+    } else {
+      setError("No buses found for this destination!");
+    }
+  };
 
   return (
     <div>
       <Navbar role="user" />
       <div className="dashboard-layout">
         <Sidebar role="user" />
-        <main className="main-content">
-          <div className="page-header">
-            <h1>My Route</h1>
-            <p>View your assigned bus route and stops</p>
-          </div>
-          
-          <div className="card">
-            <h2>{myRoute.name}</h2>
-            <div className="route-info">
-              <p><strong>Duration:</strong> {myRoute.duration}</p>
-              <p><strong>Total Stops:</strong> {myRoute.stops.length}</p>
-            </div>
-            
-            <div className="route-info">
-              <h3>Bus Stops</h3>
-              <ul className="stops-list">
-                {myRoute.stops.map((stop, index) => (
-                  <li key={index}>
-                    <strong>Stop {index + 1}:</strong> {stop}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          
-          <div className="card">
-            <h2>All Available Routes</h2>
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>Route Name</th>
-                  <th>Stops</th>
-                  <th>Duration</th>
-                </tr>
-              </thead>
-              <tbody>
-                {mockRoutes.map(route => (
-                  <tr key={route.id}>
-                    <td><strong>{route.name}</strong></td>
-                    <td>{route.stops.length} stops</td>
-                    <td>{route.duration}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <main className="main-content route-page">
+          <div className="search-card">
+            <h1>Find Your Bus</h1>
+            <p>Enter Destination:</p>
+            <input
+              type="text"
+              placeholder="Add Destination"
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+            />
+            <button onClick={handleSearch}>Search</button>
+            {error && <p className="error-text">{error}</p>}
           </div>
         </main>
       </div>
@@ -65,3 +99,4 @@ const MyRoute = () => {
 };
 
 export default MyRoute;
+// testing git change

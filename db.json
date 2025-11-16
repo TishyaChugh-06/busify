@@ -131,6 +131,14 @@
           "time": "08:25 AM"
         }
       ]
+    },
+    {
+      "id": "d252",
+      "name": "saha",
+      "stops": [
+        "stop9 stop 10"
+      ],
+      "duration": "30 min"
     }
   ],
   "payments": [
@@ -148,6 +156,30 @@
       "date": "11/13/2025, 6:17:48 PM",
       "amount": "2000",
       "method": "upi",
+      "status": "completed"
+    },
+    {
+      "id": "19a7d461c15",
+      "userName": "Vidhi",
+      "date": "11/13/2025, 6:22:18 PM",
+      "amount": "1200",
+      "method": "card",
+      "status": "completed"
+    },
+    {
+      "id": "19a8b67d20b",
+      "userName": "Riva",
+      "date": "11/16/2025, 12:13:48 PM",
+      "amount": "1000000",
+      "method": "netbanking",
+      "status": "completed"
+    },
+    {
+      "id": "19a8beed924",
+      "userName": "anusha",
+      "date": "11/16/2025, 2:41:17 PM",
+      "amount": "12",
+      "method": "card",
       "status": "completed"
     }
   ],
@@ -194,6 +226,15 @@
       "userId": "1",
       "status": "pending",
       "date": "2025-11-12"
+    },
+    {
+      "id": "09bf",
+      "busNumber": "80",
+      "description": "Flat tire\n",
+      "severity": "low",
+      "userId": 1,
+      "status": "pending",
+      "date": "2025-11-13"
     }
   ],
   "notifications": [
