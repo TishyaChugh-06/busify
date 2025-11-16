@@ -53,31 +53,6 @@
   ],
   "routes": [
     {
-      "id": "2",
-      "name": "Route 2",
-      "stops": [
-        "Campus B",
-        "Station"
-      ],
-      "duration": "40 min"
-    },
-    {
-      "id": "f5c5",
-      "name": "Route A",
-      "stops": [
-        "Ambala City"
-      ],
-      "duration": "30 min"
-    },
-    {
-      "id": "7e8b",
-      "name": "45",
-      "stops": [
-        "32"
-      ],
-      "duration": "43 min"
-    },
-    {
       "id": "r301",
       "busNumber": "B301",
       "name": "Campus - Ambala",
@@ -179,6 +154,14 @@
       "userName": "anusha",
       "date": "11/16/2025, 2:41:17 PM",
       "amount": "12",
+      "method": "card",
+      "status": "completed"
+    },
+    {
+      "id": "19a8c3a01cc",
+      "userName": "riva",
+      "date": "16/11/2025, 4:03:23 pm",
+      "amount": "988",
       "method": "card",
       "status": "completed"
     }

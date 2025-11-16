@@ -26,10 +26,22 @@ const Payments = () => {
   }, []);
 
   // ✅ Get user's name from userId
-  const getUserName = (userId) => {
-    const user = users.find((u) => u.id === userId);
-    return user ? user.name : "Unknown";
-  };
+  // ✅ FIX: Resolve name from multiple possible fields
+const getUserName = (payment) => {
+  // 1️⃣ If payment directly has name or userName (most real-world)
+  if (payment.name) return payment.name;
+  if (payment.userName) return payment.userName;
+
+  // 2️⃣ If userId exists → find in users table
+  if (payment.userId) {
+    const user = users.find((u) => u.id == payment.userId);
+    if (user) return user.name;
+  }
+
+  // 3️⃣ Fallback
+  return "Unknown";
+};
+
 
   // ✅ Update payment status dynamically
   const handleStatusChange = async (id, newStatus) => {
@@ -108,7 +120,7 @@ const Payments = () => {
               <tbody>
                 {payments.map((payment) => (
                   <tr key={payment.id}>
-                    <td>{getUserName(payment.userId)}</td>
+                    <td>{getUserName(payment)}</td>
                     <td>{payment.type}</td>
                     <td>₹{payment.amount}</td>
                     <td>{payment.date}</td>
