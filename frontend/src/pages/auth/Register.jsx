@@ -1,41 +1,59 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Auth.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Auth.css";
 
 const Register = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    role: 'user'
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    role: "user",
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Dynamic placeholder
+  const getEmailPlaceholder = () => {
+    return formData.role === "admin"
+      ? "Enter email (e.g., admin@admin.chitkara.edu.in)"
+      : "Enter email (e.g., abc@chitkara.edu.in)";
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    const email = formData.email;
+
     if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match!');
+      alert("Passwords do not match!");
       return;
     }
-    
-    // Mock registration - store in localStorage
+
+    // Student/Faculty email validation
+    if (formData.role === "user" && !email.endsWith("@chitkara.edu.in")) {
+      alert("Only @chitkara.edu.in emails are allowed for students/faculty.");
+      return;
+    }
+
+    // Admin email validation
+    if (formData.role === "admin" && !email.endsWith("@admin.chitkara.edu.in")) {
+      alert("Only @admin.chitkara.edu.in emails are allowed for admins.");
+      return;
+    }
+
     const userData = {
       name: formData.name,
       email: formData.email,
-      role: formData.role
+      role: formData.role,
     };
-    
-    localStorage.setItem('user', JSON.stringify(userData));
-    localStorage.setItem('isAuthenticated', 'true');
-    
-    // Redirect to login
-    navigate('/');
+
+    localStorage.setItem("user", JSON.stringify(userData));
+    localStorage.setItem("isAuthenticated", "true");
+
+    navigate("/");
   };
 
   return (
@@ -45,7 +63,7 @@ const Register = () => {
           <h1>Busify</h1>
           <p>Create Your Account</p>
         </div>
-        
+
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
             <label>Full Name</label>
@@ -58,19 +76,19 @@ const Register = () => {
               required
             />
           </div>
-          
+
           <div className="form-group">
             <label>Email</label>
             <input
               type="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder={getEmailPlaceholder()}
               value={formData.email}
               onChange={handleChange}
               required
             />
           </div>
-          
+
           <div className="form-group">
             <label>Password</label>
             <input
@@ -82,7 +100,7 @@ const Register = () => {
               required
             />
           </div>
-          
+
           <div className="form-group">
             <label>Confirm Password</label>
             <input
@@ -94,7 +112,7 @@ const Register = () => {
               required
             />
           </div>
-          
+
           <div className="form-group">
             <label>Register As</label>
             <select name="role" value={formData.role} onChange={handleChange}>
@@ -102,14 +120,16 @@ const Register = () => {
               <option value="admin">Admin</option>
             </select>
           </div>
-          
+
           <button type="submit" className="btn btn-primary btn-block">
             Register
           </button>
         </form>
-        
+
         <div className="auth-footer">
-          <p>Already have an account? <a href="/">Login here</a></p>
+          <p>
+            Already have an account? <a href="/">Login here</a>
+          </p>
         </div>
       </div>
     </div>
