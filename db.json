@@ -1,13 +1,12 @@
 {
   "users": [
     {
-      "id": "1",
       "name": "Riivaaaaaaa",
       "email": "riva19@example.com",
       "phone": "8396065448",
       "studentId": "STU2024002",
       "route": "Route A",
-      "role": "student"
+      "id": "1"
     },
     {
       "id": "2",
@@ -26,14 +25,6 @@
     }
   ],
   "buses": [
-    {
-      "id": "a8c9",
-      "busNumber": "20111",
-      "capacity": 1000,
-      "driver": "ritika",
-      "route": "Q",
-      "status": "active"
-    },
     {
       "id": "faf0",
       "busNumber": "BUS-201",
@@ -189,21 +180,12 @@
       "status": "resolved"
     },
     {
-      "id": "ba08",
-      "busNumber": "88",
-      "description": "hello",
-      "severity": "low",
-      "userId": "1",
-      "status": "pending",
-      "date": "2025-11-12"
-    },
-    {
       "id": "a5b9",
       "busNumber": "88",
       "description": "accident",
       "severity": "high",
       "userId": "1",
-      "status": "pending",
+      "status": "resolved",
       "date": "2025-11-12"
     },
     {
@@ -212,7 +194,7 @@
       "description": "abc",
       "severity": "low",
       "userId": "1",
-      "status": "pending",
+      "status": "in-progress",
       "date": "2025-11-12"
     },
     {
@@ -221,7 +203,7 @@
       "description": "Flat tire\n",
       "severity": "low",
       "userId": 1,
-      "status": "pending",
+      "status": "resolved",
       "date": "2025-11-13"
     },
     {
@@ -230,7 +212,7 @@
       "description": "adc",
       "severity": "medium",
       "userId": 1,
-      "status": "pending",
+      "status": "in-progress",
       "date": "2025-11-16"
     }
   ],
