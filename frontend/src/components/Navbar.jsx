@@ -14,10 +14,18 @@ const Navbar = ({ role }) => {
 
   return (
     <nav className="navbar">
+      
+      {/* LOGO + TITLE */}
       <div className="navbar-brand">
+        <img 
+          src="/logo.jpg" 
+          alt="Busify Logo" 
+          className="navbar-logo"
+        />
         <h2>Busify</h2>
       </div>
-      
+
+      {/* USER INFORMATION */}
       <div className="navbar-user">
         <span className="user-name">{user.name || user.email}</span>
         <span className="user-role">{role === 'admin' ? 'Admin' : 'User'}</span>
@@ -25,6 +33,7 @@ const Navbar = ({ role }) => {
           Logout
         </button>
       </div>
+
     </nav>
   );
 };
